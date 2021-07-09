@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Name Chooser</title>
+        <link href="new_style.css" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <!-- Header / Nav Area -->
+        <header class="header_container">
+            <h1 class="left_title">Name Chooser</h1>
+            <nav class="right_title">
+                <form>
+                    <div id = "login_button_group" class="login_button_group">
+                        <!-- Button to switch for login/logout -->
+                        <input id="login_button" class="confirm_button" type="button" value="Login"></input>
+                        <input id="register_button"class="confirm_button" type="button" value="Register"></input>
+                    </div>
+                    <div id = "user_button_group" class="user_button_group">
+                        <!-- Button to switch for login/logout -->
+                        <h3 id="username_display">User Name</h3>
+                        <input id="show_group_button" class="confirm_button" type="button" value="Show Classes" onclick="showGroups()"></input>
+                        <input id="logout_button"class="confirm_button cancel" type="button" value="Logout"></input>
+                    </div>
+                </form>
+            </nav>
+        </header>
+
+        <!-- Main Area of Page Container -->
+        <main>
+            <!-- Flex container - center object on screen -->
+            <div id="placeholder">
+                <p>Waiting for content...</p>
+                <img id="placeholder_img" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621280578/portfolio/child_hohuui.png" />
+            </div>
+
+            <!-- Flex container - center name on screen -->
+            <div id="names_area" class="names_area">
+                <form>
+                    <div class="names_area_nav">
+                        <button class="confirm_button" id="next_name" onclick="nextName()">Choose Another</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Flex container - row for classes -->
+            <div id="card_area" class="card_area">
+                <!-- Insert Card Divs Here -->
+            </div>
+        </main>
+
+        <!-- Login Modal -->
+        <div id="login_modal" class="modal">
+            <!-- Modal content -->
+            <div id="modal_content" class="modal_content">
+                <div>
+                    <span id="login_modal_close" class="modal_close">&times;</span>
+                </div>
+                <form>
+                    <fieldset>
+                      <legend>Sign in ...</legend>
+                  
+                      <input class="text_input" type="text" id="username" placeholder="teacher@school.com">
+                      <label for="username">Username</label><br/>
+                  
+                      <input class="text_input" type="password" id="password">
+                      <label for="password">Password</label><br/>
+                  
+                      <input class="confirm_button" type="button" value="Login" onclick="login()">
+                      <input class="confirm_button cancel" type="button" value="Cancel" onclick="closeForm(1)">
+                    </fieldset>
+                  </form>
+            </div>
+        </div>
+
+        <!-- Register Modal -->
+        <div id="register_modal" class="modal">
+            <!-- Modal content -->
+            <div id="modal_content" class="modal_content">
+                <div>
+                    <span id="register_modal_close" class="modal_close">&times;</span>
+                </div>
+                <form>
+                    <fieldset>
+                        <legend>Register ...</legend>
+                    
+                        <input type="text" id="reg-username" placeholder="teacher@school.com">
+                        <label for="reg-username">Username</label><br/>
+                    
+                        <input type="password" id="reg-password">
+                        <label for="reg-password">Password</label><br/>
+
+                        <input type="password" id="reg-password2">
+                        <label for="reg-password2">Re-type Password</label><br/>
+                    
+                        <input class="confirm_button" type="button" value="Register" onclick="register()">
+                        <input class="confirm_button cancel" type="button" value="Cancel" onclick="closeForm(2)">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div>
+                <p>2021</p>
+            </div>
+        </footer>
+    </body>
+    <script src="user.js"></script>
+    <script src="group.js"></script>
+    <script src="groupPageCreator.js"></script>
+    <script src="groupdivcreator.js"></script>
+    <script src="modals.js"></script>
+    <script src="start.js"></script>
+</html>
