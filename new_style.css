@@ -18,7 +18,7 @@ img {
     justify-items: center;
 }
 
-.names_area{
+.card_area{
     display: none;
     justify-content: space-between;
     align-content: center;
@@ -27,7 +27,8 @@ img {
 
 .classname_div{
     border-radius: 5px;
-    background: chartreuse;
+    border: 2px solid #888;
+    background: #444;
     width:200px;
     padding: 20px;
     margin:20px;
